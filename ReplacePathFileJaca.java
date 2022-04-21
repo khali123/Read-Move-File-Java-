@@ -10,12 +10,12 @@ import java.nio.file.StandardCopyOption;
 public class ReplacePathFileJaca {
 	public static void main(String[] args) throws IOException {
 		
-		File source = new File("C:\\Users\\kml\\Desktop\\espagnol\\Recibí carga inicial.pdf");
+		File source = new File("C:\\Users\\kml\\Desktop\\espagnol\\RecibÃ­ carga inicial.pdf");
 		Path path = Paths.get("C:\\Users\\kml\\Desktop\\espagnol\\generales\\");
 
 		Path dest = Files.createDirectories(path);
 
-		File deste = new File("C:\\Users\\kml\\Desktop\\espagnol\\generales\\Re.pdf");
+		File deste = new File("C:\\Users\\kml\\Desktop\\espagnol\\generales\\",source.getName());
 		boolean isMoved = source.renameTo(deste);
 
 		if (source.mkdirs()) {
